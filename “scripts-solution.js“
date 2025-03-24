@@ -1,0 +1,4 @@
+// Funkion On-klick-button
+document.getElementbyId("button1").onclick = function () {
+    // Code
+}

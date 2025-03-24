@@ -20,7 +20,20 @@
         </ul>
     </nav>
     <main>
+        <script type=“text/javascript“ src=“scripts-solution.js“></script>
+
 <h2>CO2-Tabelle</h2>
+
+<script>
+    fetch('Unternehmen.txt')
+    .then(response => response.json()) //Datei als JSON parsen
+    .then(data => {
+        document.getElementById('table').textContent= JSON.stringify(data);
+    })
+    .catch(error => {
+        console.error('Fehler beim Laden der Datei: ', error);
+</script>
+
         <table id="table">
             <tr>
                 <th><strong>Rang</strong></th>
@@ -32,16 +45,7 @@
                 <th><strong>CO2-Ausstoß pro Mitarbeiter</strong></strongCO2-Aussto></th>
                 <th><strong>CO2-Ausstoß pro Umsatz</strong></th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Apple</td>
-                <td>Technologie</td>
-                <td>USA</td>
-                <td>Nordamerika</td>
-                <td>64,5 Mio. t</td>
-                <td>1,5 t</td>
-                <td>0,1 t</td>
-            </tr>
+          
         </table>
     </main>
     <footer>
