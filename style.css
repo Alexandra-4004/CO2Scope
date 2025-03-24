@@ -1,19 +1,64 @@
+/*Responsive Design:
+Desktop: @media screen and (min-width:1024pc) {
+    …}
+Tablet: @media screen and (min-width: 768px) and (max-width: 1023px) {…}
+
+Smartphone: @media screen and (max-width: 767px) {...}*/
 body {
-    background-color: azure;
+    background-color: rgb(225, 191, 154);
     font-family: Arial, Helvetica, sans-serif;
+
+    /*flex*/
+    display: flex;
+    flex-wrap: wrap; /*Elemente können nebeneinander gewrappt werden, wenn Platz verfügbar*/
 }
 
-h1 {
+header {
     color: green;
     text-align: center;
     font-weight: bold;
+    flex-basis: 100%;
 }
 
-.table-name-entry {
+nav {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    flex-basis: 20%;
+}
+
+main {
+    background-color: lightyellow;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    flex-basis: 80%;
+}
+
+/*
+.table {
+    background-color: green;
     width: 100%;
     border-collapse: collapse;
+    flex-basis: 80%;
 }
 
+*/
+
+footer {
+    background-color: #faa
+    padding: 1em;
+    flex-basis: 100%;
+} 
+footer nav ul {
+    text-align: center; 
+} 
+footer nav ul li {
+    display: inline; 
+}
+
+/*
 #heading-container {
     display: flex;
     justify-content: center;
@@ -25,3 +70,4 @@ h1 {
     border-collapse: collapse;
     padding: 2em
 }
+*/
