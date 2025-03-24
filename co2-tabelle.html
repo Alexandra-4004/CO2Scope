@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <title>CO2-Tabelle der Unternehmen</title>
 </head>
+
 <body>
     <header>
         <div id="heading-container">
             <h1>CO2Scope: CO2-Tabelle verschiedener Unternehmen weltweit</h1>
-         </div>
+        </div>
+        <div id="heading-container">
+            <img src="Logo-Co2Scope.jpg" alt="CO2Scope" style="width:100%;height:auto;">
+            <h1>CO2Scope: CO2-Ausstoß</h1>
+        </div>
+        <nav>
+            <ul class="text-end">
+                <li class="d-inline"><a href="index.html">Home</a></li>
+                <li class="d-inline"><a href="co2-tabelle.html">CO2-Tabelle</a></li>
+                <li class="d-inline"><a href="about.html">Über uns</a></li>
+                <li class="d-inline"><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="co2-tabelle.html">CO2-Tabelle</a></li>
-            <li><a href="about.html">Über uns</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
     <main>
         <script type=“text/javascript“ src=“scripts-solution.js“></script>
 
-<h2>CO2-Tabelle</h2>
+        <h2>CO2-Tabelle</h2>
 
-<script>
-    fetch('Unternehmen.txt')
-    .then(response => response.json()) //Datei als JSON parsen
-    .then(data => {
-        document.getElementById('table').textContent= JSON.stringify(data);
-    })
-    .catch(error => {
-        console.error('Fehler beim Laden der Datei: ', error);
-</script>
+        <script>
+            fetch('Unternehmen.txt')
+                .then(response => response.json()) //Datei als JSON parsen
+                .then(data => {
+                    document.getElementById('table').textContent = JSON.stringify(data);
+                })
+                .catch(error => {
+                    console.error('Fehler beim Laden der Datei: ', error);
+        </script>
 
         <table id="table">
             <tr>
                 <th><strong>Rang</strong></th>
                 <th><strong>Unternehmen</strong></th>
                 <th><strong>Branche</strong></th>
-                <th><strong>Land</strong></th> 
-                <th><strong>Kontinent</strong></th> 
+                <th><strong>Land</strong></th>
+                <th><strong>Kontinent</strong></th>
                 <th><strong>CO2-Ausstoß gesamt</strong></th>
                 <th><strong>CO2-Ausstoß pro Mitarbeiter</strong></strongCO2-Aussto></th>
                 <th><strong>CO2-Ausstoß pro Umsatz</strong></th>
             </tr>
-          
+
         </table>
     </main>
     <footer>
@@ -54,4 +60,5 @@
         <p><a href="rechtlichehinweise.html">Rechtliche Hinweise</a></p>
     </footer>
 </body>
+
 </html>

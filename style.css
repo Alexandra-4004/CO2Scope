@@ -4,6 +4,26 @@ Desktop: @media screen and (min-width:1024pc) {
 Tablet: @media screen and (min-width: 768px) and (max-width: 1023px) {…}
 
 Smartphone: @media screen and (max-width: 767px) {...}*/
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 200px;
+    heigh 100vh;
+    background-color: #333;
+    padding-top: 20px;
+    }
+
+    /*Links für LTR*/
+    [dir="rtl"] .menu {
+        left: 0;
+    } 
+
+    /*Rechts für LTR*/
+    [dir="ltr"] .menu {
+        right: 0;
+    }
+
 body {
     background-color: rgb(225, 191, 154);
     font-family: Arial, Helvetica, sans-serif;
@@ -14,6 +34,7 @@ body {
 }
 
 header {
+    background-color: rgb(225, 191, 154);
     color: green;
     text-align: center;
     font-weight: bold;
@@ -51,6 +72,7 @@ footer {
     padding: 1em;
     flex-basis: 100%;
 } 
+ 
 footer nav ul {
     text-align: center; 
 } 

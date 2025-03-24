@@ -1,28 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="de" dir="ltr">
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css" /> <!--Verweis auf Stylesheet-Datei-->
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3/dist/css/bootstrap.min.css">
+    <!--Verweis auf Bootstrap-Stylesheet-->
+    <title>CO2Scope</title>
 </head>
 
 <body>
     <header>
-        <div id="heading-container">
-            <img src="Logo-Co2Scope.jpg" alt="CO2Scope" style="width:100%;height:auto;">
-            <h1>CO2Scope: CO2-Ausstoß</h1>
+        <div id="heading-container" class="row">
+            <div class="col-md-12 col-lg-4">
+                <img src="Logo-Co2Scope.png" alt="CO2Scope" style="width:100%;height:auto;">
+            </div>
+            <div class="col-md-12 col-lg-8">
+                <h1>CO2Scope: CO2-Ausstoß</h1>
+            </div>
         </div>
+        <nav>
+            <ul class="text-end">
+                <li class="d-inline"><a href="index.html">Home</a></li>
+                <li class="d-inline"><a href="co2-tabelle.html">CO2-Tabelle</a></li>
+                <li class="d-inline"><a href="about.html">Über uns</a></li>
+                <li class="d-inline"><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="co2-tabelle.html">CO2-Tabelle</a></li>
-            <li><a href="about.html">Über uns</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
+
     <main>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                Kleiner Bildschirm
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                Mittlerer Bildschirm
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                Großer Bildschirm
+            </div>
+        </div>
+
         <h2>Berechnung der CO2-Bilanz für Unternehmen</h2>
         <p>Die CO₂-Bilanz eines Unternehmens, auch als Corporate Carbon Footprint bezeichnet, erfasst die gesamten
             direkten und indirekten Treibhausgasemissionen entlang der gesamten Wertschöpfungskette. Sie dient dazu, die
@@ -65,39 +85,46 @@
         <p>Ein weiterer international anerkannter Standard im Bereich Umweltmanagement ist die ISO 14064. Sie ergänzt
             das GHG-Protocol durch detailiertere Anforderungen für die CO2-Bilanzierung.</p>
         <h2> Die Bedeutung der Scope-3-Emissionen</h2>
-            <p>Die Erfassung der Scope-3-Emissionen ist für eine aussagekräftige CO₂-Bilanz unerlässlich, da diese je
-                nach Branche über 90% der gesamten CO₂-Emissionen eines Unternehmens ausmachen können. Allerdings kann
-                die Berechnung der Scope-3-Emissionen oft komplex und herausfordernd sein.<sup>1</sup></p>
-            <h2> Erstellung einer CO2-Bilanz </h2>
-            <p>Die Berechnung einer CO₂-Bilanz erfolgt in mehreren Schritten:</p>
-            <ul>
-                <li>1. Datenerhebung: Erfassung aller relevanten Emissionsquellen.</li>
-                <li>2. Kategorisierung nach Scopes: Einordnung der Emissionen nach GHG Protocol oder ISO 14064.</li>
-                <li>3. Berechnung mit anerkannten Methoden: Nutzung von CO₂-Umrechnungsfaktoren und Berechnungstools.</li>
-                <li>4. Analyse und Berichterstattung: Dokumentation und Bewertung der Ergebnisse.</li>
-            </ul>
-           
-            </br>
-            <p>Die Erstellung einer CO₂-Bilanz ist ein wichtiger Schritt, um den eigenen ökologischen Fußabdruck zu
-                analysieren und Maßnahmen zur Reduzierung von Treibhausgasemissionen zu identifizieren. Eine
-                detaillierte CO₂-Bilanz ermöglicht es Unternehmen, ihre direkten und indirekten Emissionen zu erfassen
-                und zu quantifizieren. Sie bildet die Grundlage für jede Klimastrategie.<sup>1</sup></p>
-            <h2> Digitale Tools für die CO2-Bilanzierung </h2>
-            <p>Für kleine und mittlere Unternehmen (KMU) bietet carbon-connect einen Online-CO₂-Rechner an, der eine
-                benutzerfreundliche Möglichkeit bietet, den CO₂-Fußabdruck zu berechnen. Dieses Tool erfasst Daten zu
-                den Emissionen und hilft dabei, die Umweltbilanz zu erstellen.</p>
-            <p>Die Erstellung einer CO₂-Bilanz ist ein kontinuierlicher Prozess, der regelmäßige Aktualisierungen und
-                Überprüfungen erfordert, um die Fortschritte bei der Emissionsreduktion zu messen und sicherzustellen,
-                dass die festgelegten Klimaziele erreicht werden.<sup>1</sup></p>
-            <p><sup>1</sup>https://www.carbon-connect.ch/resources/leitfaden-berechnung-co2-bilanz-unternehmen#unternehmen</p>
-            <p><sup>2</sup>https://ghgprotocol.org/</p>
+        <p>Die Erfassung der Scope-3-Emissionen ist für eine aussagekräftige CO₂-Bilanz unerlässlich, da diese je
+            nach Branche über 90% der gesamten CO₂-Emissionen eines Unternehmens ausmachen können. Allerdings kann
+            die Berechnung der Scope-3-Emissionen oft komplex und herausfordernd sein.<sup>1</sup></p>
+        <h2> Erstellung einer CO2-Bilanz </h2>
+        <p>Die Berechnung einer CO₂-Bilanz erfolgt in mehreren Schritten:</p>
+        <ul>
+            <li>1. Datenerhebung: Erfassung aller relevanten Emissionsquellen.</li>
+            <li>2. Kategorisierung nach Scopes: Einordnung der Emissionen nach GHG Protocol oder ISO 14064.</li>
+            <li>3. Berechnung mit anerkannten Methoden: Nutzung von CO₂-Umrechnungsfaktoren und Berechnungstools.</li>
+            <li>4. Analyse und Berichterstattung: Dokumentation und Bewertung der Ergebnisse.</li>
+        </ul>
+
+        </br>
+        <p>Die Erstellung einer CO₂-Bilanz ist ein wichtiger Schritt, um den eigenen ökologischen Fußabdruck zu
+            analysieren und Maßnahmen zur Reduzierung von Treibhausgasemissionen zu identifizieren. Eine
+            detaillierte CO₂-Bilanz ermöglicht es Unternehmen, ihre direkten und indirekten Emissionen zu erfassen
+            und zu quantifizieren. Sie bildet die Grundlage für jede Klimastrategie.<sup>1</sup></p>
+        <h2> Digitale Tools für die CO2-Bilanzierung </h2>
+        <p>Für kleine und mittlere Unternehmen (KMU) bietet carbon-connect einen Online-CO₂-Rechner an, der eine
+            benutzerfreundliche Möglichkeit bietet, den CO₂-Fußabdruck zu berechnen. Dieses Tool erfasst Daten zu
+            den Emissionen und hilft dabei, die Umweltbilanz zu erstellen.</p>
+        <p>Die Erstellung einer CO₂-Bilanz ist ein kontinuierlicher Prozess, der regelmäßige Aktualisierungen und
+            Überprüfungen erfordert, um die Fortschritte bei der Emissionsreduktion zu messen und sicherzustellen,
+            dass die festgelegten Klimaziele erreicht werden.<sup>1</sup></p>
+        <p><sup>1</sup>https://www.carbon-connect.ch/resources/leitfaden-berechnung-co2-bilanz-unternehmen#unternehmen
+        </p>
+        <p><sup>2</sup>https://ghgprotocol.org/</p>
 
     </main>
+
     <footer>
         <p><a href="impressum.html">Impressum</a></p>
         <p><a href="datenschutzerklärung.html">Datenschutzerklärung</a></p>
         <p><a href="rechtlichehinweise.html">Rechtliche Hinweise</a></p>
     </footer>
+    <script>
+        document.documentElement.dir=navigator.language.startsWith('ar') || navigator.language.startsWith('he') ? 'rtl' : 'ltr'; // Set the direction of the page based on the user's language
+
+    </script>>
+
 </body>
 
 </html>
