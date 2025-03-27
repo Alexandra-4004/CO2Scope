@@ -1,0 +1,134 @@
+{
+  "companies": [
+    {
+      "Rang": 1,
+      "Unternehmen": "Beispiel AG",
+      "Branche": "Energie",
+      "Land": "Deutschland",
+      "Kontinent": "Europa",
+      "CO2-Ausstoß gesamt": 5000000,
+      "CO2-Ausstoß pro Mitarbeiter": 50,
+      "CO2-Ausstoß pro Umsatz": 0.2
+    },
+    {
+      "Rang": 2,
+      "Unternehmen": "Sample Corp",
+      "Branche": "Technologie",
+      "Land": "USA",
+      "Kontinent": "Nordamerika",
+      "CO2-Ausstoß gesamt": 3000000,
+      "CO2-Ausstoß pro Mitarbeiter": 30,
+      "CO2-Ausstoß pro Umsatz": 0.15
+    },
+    {
+      "Rang": 3,
+      "Unternehmen": "Eco Solutions Ltd",
+      "Branche": "Umwelttechnik",
+      "Land": "Kanada",
+      "Kontinent": "Nordamerika",
+      "CO2-Ausstoß gesamt": 1500000,
+      "CO2-Ausstoß pro Mitarbeiter": 20,
+      "CO2-Ausstoß pro Umsatz": 0.1
+    },
+    {
+      "Rang": 4,
+      "Unternehmen": "Green Future GmbH",
+      "Branche": "Erneuerbare Energien",
+      "Land": "Deutschland",
+      "Kontinent": "Europa",
+      "CO2-Ausstoß gesamt": 1200000,
+      "CO2-Ausstoß pro Mitarbeiter": 15,
+      "CO2-Ausstoß pro Umsatz": 0.08
+    },
+    {
+      "Rang": 5,
+      "Unternehmen": "Tech Innovators Inc",
+      "Branche": "Technologie",
+      "Land": "Japan",
+      "Kontinent": "Asien",
+      "CO2-Ausstoß gesamt": 2800000,
+      "CO2-Ausstoß pro Mitarbeiter": 25,
+      "CO2-Ausstoß pro Umsatz": 0.12
+    },
+    {
+      "Rang": 6,
+      "Unternehmen": "Oil & Gas Global",
+      "Branche": "Energie",
+      "Land": "Saudi-Arabien",
+      "Kontinent": "Asien",
+      "CO2-Ausstoß gesamt": 9000000,
+      "CO2-Ausstoß pro Mitarbeiter": 80,
+      "CO2-Ausstoß pro Umsatz": 0.5
+    },
+    {
+      "Rang": 7,
+      "Unternehmen": "Automotive Leaders",
+      "Branche": "Automobilindustrie",
+      "Land": "USA",
+      "Kontinent": "Nordamerika",
+      "CO2-Ausstoß gesamt": 7000000,
+      "CO2-Ausstoß pro Mitarbeiter": 70,
+      "CO2-Ausstoß pro Umsatz": 0.3
+    },
+    {
+      "Rang": 8,
+      "Unternehmen": "Steel Makers Ltd",
+      "Branche": "Stahlindustrie",
+      "Land": "Indien",
+      "Kontinent": "Asien",
+      "CO2-Ausstoß gesamt": 8500000,
+      "CO2-Ausstoß pro Mitarbeiter": 90,
+      "CO2-Ausstoß pro Umsatz": 0.4
+    },
+    {
+      "Rang": 9,
+      "Unternehmen": "Chemical Corp",
+      "Branche": "Chemie",
+      "Land": "China",
+      "Kontinent": "Asien",
+      "CO2-Ausstoß gesamt": 6000000,
+      "CO2-Ausstoß pro Mitarbeiter": 60,
+      "CO2-Ausstoß pro Umsatz": 0.25
+    },
+    {
+      "Rang": 10,
+      "Unternehmen": "Food Processing Inc",
+      "Branche": "Lebensmittelindustrie",
+      "Land": "Frankreich",
+      "Kontinent": "Europa",
+      "CO2-Ausstoß gesamt": 2000000,
+      "CO2-Ausstoß pro Mitarbeiter": 22,
+      "CO2-Ausstoß pro Umsatz": 0.1
+    },
+    {
+      "Rang": 11,
+      "Unternehmen": "Smart Grid Solutions",
+      "Branche": "Energie",
+      "Land": "UK",
+      "Kontinent": "Europa",
+      "CO2-Ausstoß gesamt": 1800000,
+      "CO2-Ausstoß pro Mitarbeiter": 19,
+      "CO2-Ausstoß pro Umsatz": 0.09
+    },
+    {
+      "Rang": 12,
+      "Unternehmen": "Logistics World",
+      "Branche": "Transport",
+      "Land": "Brasilien",
+      "Kontinent": "Südamerika",
+      "CO2-Ausstoß gesamt": 5000000,
+      "CO2-Ausstoß pro Mitarbeiter": 55,
+      "CO2-Ausstoß pro Umsatz": 0.22
+    },
+    {
+      "Rang": 13,
+      "Unternehmen": "African Mining Co",
+      "Branche": "Bergbau",
+      "Land": "Südafrika",
+      "Kontinent": "Afrika",
+      "CO2-Ausstoß gesamt": 7500000,
+      "CO2-Ausstoß pro Mitarbeiter": 85,
+      "CO2-Ausstoß pro Umsatz": 0.35
+    }
+  ]
+}

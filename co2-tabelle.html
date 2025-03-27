@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <title>CO2-Tabelle der Unternehmen</title>
 </head>
 
 <body>
     <header>
-        <div id="heading-container">
-            <h1>CO2Scope: CO2-Tabelle verschiedener Unternehmen weltweit</h1>
-        </div>
-        <div id="heading-container">
-            <img src="Logo-Co2Scope.jpg" alt="CO2Scope" style="width:100%;height:auto;">
-            <h1>CO2Scope: CO2-Ausstoß</h1>
+        <script type="text/javascript" src="scripts-solution.js"></script>
+        <div id="heading-container" class="row">
+            <div class="col-md-12 col-lg-4">
+                <img src="Logo-Co2Scope.png" alt="CO2Scope" style="width:100%;height:auto;">
+            </div>
+            <div class="col-md-12 col-lg-8">
+                <h1>CO2-Ausstoß von Unternehmen: CO2-Tabelle</h1>
+            </div>
         </div>
         <nav>
             <ul class="text-end">
@@ -25,36 +28,85 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <script type=“text/javascript“ src=“scripts-solution.js“></script>
 
-        <h2>CO2-Tabelle</h2>
+    <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unternehmenstabelle</title>
+    <script defer src="scripts-solution.js"></script>
+    <script defer src="Table Filter Sort.js"></script>
+</head>
+<body>
 
-        <script>
-            fetch('Unternehmen.txt')
-                .then(response => response.json()) //Datei als JSON parsen
-                .then(data => {
-                    document.getElementById('table').textContent = JSON.stringify(data);
-                })
-                .catch(error => {
-                    console.error('Fehler beim Laden der Datei: ', error);
-        </script>
+    <h1>Unternehmen und CO2-Ausstoß</h1>
 
-        <table id="table">
+    <!-- Buttons für Filter -->
+    <label for="filterLand">Filter nach Land:</label>
+    <select id="filterLand">
+        <option value="">Alle</option>
+        <option value="Deutschland">Deutschland</option>
+        <option value="USA">USA</option>
+        <option value="Kanada">Kanada</option>
+        <option value="Japan">Japan</option>
+        <option value="Saudi-Arabien">Saudi-Arabien</option>
+        <option value="Indien">Indien</option>
+        <option value="China">China</option>
+        <option value="Frankreich">Frankreich</option>
+        <option value="UK">UK</option>
+        <option value="Brasilien">Brasilien</option>
+        <option value="Südafrika">Südafrika</option>
+    </select>
+
+    <button id="sortUnternehmen">Sortiere nach Unternehmen</button>
+
+
+    <table id="companyTable">
+        <thead>
             <tr>
-                <th><strong>Rang</strong></th>
-                <th><strong>Unternehmen</strong></th>
-                <th><strong>Branche</strong></th>
-                <th><strong>Land</strong></th>
-                <th><strong>Kontinent</strong></th>
-                <th><strong>CO2-Ausstoß gesamt</strong></th>
-                <th><strong>CO2-Ausstoß pro Mitarbeiter</strong></strongCO2-Aussto></th>
-                <th><strong>CO2-Ausstoß pro Umsatz</strong></th>
+                <th>Rang</th>
+                <th>Unternehmen</th>
+                <th>Branche</th>
+                <th>Land</th>
+                <th>Kontinent</th>
+                <th>CO2-Ausstoß gesamt</th>
+                <th>CO2-Ausstoß pro Mitarbeiter</th>
+                <th>CO2-Ausstoß pro Umsatz</th>
             </tr>
+        </thead>
+        <tbody>
+            <!-- Daten werden hier eingefügt -->
+        </tbody>
+    </table>
 
-        </table>
-    </main>
-    <footer>
+    <script>
+        // JSON-Datei laden und in die Tabelle einfügen
+        fetch('Unternehmen.json')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.querySelector("#companyTable tbody");
+                data.companies.forEach(company => {
+                    const row = document.createElement("tr");
+
+                    row.innerHTML = `
+                        <td>${company.Rang}</td>
+                        <td>${company.Unternehmen}</td>
+                        <td>${company.Branche}</td>
+                        <td>${company.Land}</td>
+                        <td>${company.Kontinent}</td>
+                        <td>${Number(company["CO2-Ausstoß gesamt"]).toLocaleString()}</td>
+                        <td>${company["CO2-Ausstoß pro Mitarbeiter"]}</td>
+                        <td>${company["CO2-Ausstoß pro Umsatz"]}</td>
+                    `;
+
+                    tableBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error("Fehler beim Laden der Datei:", error));
+    </script>
+
+<footer>
         <p><a href="impressum.html">Impressum</a></p>
         <p><a href="datenschutzerklärung.html">Datenschutzerklärung</a></p>
         <p><a href="rechtlichehinweise.html">Rechtliche Hinweise</a></p>

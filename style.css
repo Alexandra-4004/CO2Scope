@@ -5,24 +5,44 @@ Tablet: @media screen and (min-width: 768px) and (max-width: 1023px) {…}
 
 Smartphone: @media screen and (max-width: 767px) {...}*/
 
-.menu {
+.nav {
     position: fixed;
     top: 0;
     width: 200px;
     heigh 100vh;
     background-color: #333;
     padding-top: 20px;
-    }
+}
 
-    /*Links für LTR*/
-    [dir="rtl"] .menu {
-        left: 0;
-    } 
+/*Links für LTR*/
+[dir="rtl"] .menu {
+    left: 0;
+}
 
-    /*Rechts für LTR*/
-    [dir="ltr"] .menu {
-        right: 0;
-    }
+/*Rechts für LTR*/
+[dir="ltr"] .menu {
+    right: 0;
+}
+
+nav ul {
+    list-style: none;    /* Entfernt die Aufzählungszeichen */
+    padding: 0;    /* Entfernt Standard-Padding */
+    margin: 0;    /* Entfernt Standard-Margin */
+    display: flex;    /* Setzt die Links in eine Reihe */
+    gap: 15px;   /* Fügt Abstand zwischen den Links hinzu */
+}
+
+nav a {
+    text-decoration: none;    /* Entfernt die Unterstreichung */
+    font-weight: normal;    /* Entfernt Fettschrift */
+    color: black;    /* Setzt die Textfarbe (kann angepasst werden) */
+    padding: 5px 10px;    /* Fügt etwas Innenabstand hinzu */
+}
+
+nav a:hover {
+    color: rgb(14, 139, 0);    /* Farbe ändern, wenn die Maus drüberfährt */
+}
+
 
 body {
     background-color: rgb(225, 191, 154);
@@ -30,7 +50,8 @@ body {
 
     /*flex*/
     display: flex;
-    flex-wrap: wrap; /*Elemente können nebeneinander gewrappt werden, wenn Platz verfügbar*/
+    flex-wrap: wrap;
+    /*Elemente können nebeneinander gewrappt werden, wenn Platz verfügbar*/
 }
 
 header {
@@ -57,27 +78,43 @@ main {
     flex-basis: 80%;
 }
 
-/*
-.table {
+table {
     background-color: green;
     width: 100%;
     border-collapse: collapse;
     flex-basis: 80%;
 }
+tr.ungerade{
+    background-color: #EEE;
+}
 
-*/
+tr.gerade{
+    background-color: #FFF;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
 
 footer {
-    background-color: #faa
+    background-color: #faa;
     padding: 1em;
     flex-basis: 100%;
-} 
- 
+}
+
 footer nav ul {
-    text-align: center; 
-} 
+    text-align: center;
+}
+
 footer nav ul li {
-    display: inline; 
+    display: inline;
 }
 
 /*
