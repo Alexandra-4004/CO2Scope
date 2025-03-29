@@ -3,16 +3,8 @@ Desktop: @media screen and (min-width:1024pc) {
     …}
 Tablet: @media screen and (min-width: 768px) and (max-width: 1023px) {…}
 
-Smartphone: @media screen and (max-width: 767px) {...}*/
-
-.nav {
-    position: fixed;
-    top: 0;
-    width: 200px;
-    heigh 100vh;
-    background-color: #333;
-    padding-top: 20px;
-}
+Smartphone: @media screen and (max-width: 767px) {...}
+*/
 
 /*Links für LTR*/
 [dir="rtl"] .menu {
@@ -22,6 +14,24 @@ Smartphone: @media screen and (max-width: 767px) {...}*/
 /*Rechts für LTR*/
 [dir="ltr"] .menu {
     right: 0;
+}
+
+/*Navigation*/
+.nav {
+    position: fixed;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #333;
+    padding-top: 20px;
+}
+
+nav {
+    background-color: rgba(113, 241, 188, 0.272);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    flex-basis: 20%;
 }
 
 nav ul {
@@ -35,8 +45,8 @@ nav ul {
 nav a {
     text-decoration: none;    /* Entfernt die Unterstreichung */
     font-weight: normal;    /* Entfernt Fettschrift */
-    color: black;    /* Setzt die Textfarbe (kann angepasst werden) */
-    padding: 5px 10px;    /* Fügt etwas Innenabstand hinzu */
+    color: black;    /* Setzt die Textfarbe*/
+    padding: 5px 10px;
 }
 
 nav a:hover {
@@ -62,14 +72,6 @@ header {
     flex-basis: 100%;
 }
 
-nav {
-    background-color: lightblue;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    flex-basis: 20%;
-}
-
 main {
     background-color: lightyellow;
     padding: 20px;
@@ -78,8 +80,9 @@ main {
     flex-basis: 80%;
 }
 
+/*Tabelle*/
 table {
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.509);
     width: 100%;
     border-collapse: collapse;
     flex-basis: 80%;
@@ -102,9 +105,26 @@ td {
 th {
     background-color: #f2f2f2;
 }
+button {
+    background-color: #4CAF50; /* Grün */
+    border: none;
+    color: white;
+    padding: 1px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: flex;
+}
+button:hover {
+    background-color: #45a049; /* Dunkleres Grün */
+}
 
+/*Footer*/
 footer {
-    background-color: #faa;
+    background-color:  rgb(225, 191, 154);
     padding: 1em;
     flex-basis: 100%;
 }
@@ -117,16 +137,20 @@ footer nav ul li {
     display: inline;
 }
 
-/*
-#heading-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+footer a {
+    padding: 0;    /* Entfernt Standard-Padding */
+    margin: 0;    /* Entfernt Standard-Margin */
+    display: flex;    /* Setzt die Links in eine Reihe */
+    gap: 15px;   /* Fügt Abstand zwischen den Links hinzu */
 }
 
-#haupttaelle, tr,td {
-    border: solid black;
-    border-collapse: collapse;
-    padding: 2em
+footer a {
+    text-decoration: none;    /* Entfernt die Unterstreichung */
+    font-weight: normal;    /* Entfernt Fettschrift */
+    color: black;    /* Setzt die Textfarbe */
+    padding: 5px 10px;    /* Fügt etwas Innenabstand hinzu */
 }
-*/
+
+footer a:hover {
+    color: rgb(14, 139, 0);    /* Farbe ändern, wenn die Maus drüberfährt */
+}

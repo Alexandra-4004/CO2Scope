@@ -2,7 +2,7 @@
   "companies": [
     {
       "Rang": 1,
-      "Unternehmen": "Beispiel AG",
+      "Unternehmen": "Energy AG",
       "Branche": "Energie",
       "Land": "Deutschland",
       "Kontinent": "Europa",
@@ -12,7 +12,7 @@
     },
     {
       "Rang": 2,
-      "Unternehmen": "Sample Corp",
+      "Unternehmen": "NorthTec Corp",
       "Branche": "Technologie",
       "Land": "USA",
       "Kontinent": "Nordamerika",

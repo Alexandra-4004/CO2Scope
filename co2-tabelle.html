@@ -2,18 +2,18 @@
 <html lang="de">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <title>CO2-Tabelle der Unternehmen</title>
+    <script defer src="scripts-solution.js"></script>
 </head>
 
-<body>
+<body onload="loadData()">
     <header>
-        <script type="text/javascript" src="scripts-solution.js"></script>
         <div id="heading-container" class="row">
             <div class="col-md-12 col-lg-4">
-                <img src="Logo-Co2Scope.png" alt="CO2Scope" style="width:100%;height:auto;">
+                <img src="Logo-Co2Scope.png" alt="CO2Scope" style="width:20%;height:auto;">
             </div>
             <div class="col-md-12 col-lg-8">
                 <h1>CO2-Ausstoß von Unternehmen: CO2-Tabelle</h1>
@@ -29,88 +29,66 @@
         </nav>
     </header>
 
-    <!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unternehmenstabelle</title>
-    <script defer src="scripts-solution.js"></script>
-    <script defer src="Table Filter Sort.js"></script>
-</head>
-<body>
+    <main>
+        <h1>Unternehmen und CO2-Ausstoß</h1>
 
-    <h1>Unternehmen und CO2-Ausstoß</h1>
+        <!-- Buttons für Filter -->
+        <label for="filterLand">Filter nach Land:</label>
+        <select id="filterLand">
+            <option value="">Alle</option>
+            <option value="Deutschland">Deutschland</option>
+            <option value="USA">USA</option>
+            <option value="Kanada">Kanada</option>
+            <option value="Japan">Japan</option>
+            <option value="Saudi-Arabien">Saudi-Arabien</option>
+            <option value="Indien">Indien</option>
+            <option value="China">China</option>
+            <option value="Frankreich">Frankreich</option>
+            <option value="UK">UK</option>
+            <option value="Brasilien">Brasilien</option>
+            <option value="Südafrika">Südafrika</option>
+        </select>
+        </br> 
+    </br>
+    <button onclick="sortRang()" id="sortRang">Sortiere nach Rang</button>      
+         </br>
+         <button onclick="sortUnternehmen()" id="sortUnternehmen">Sortiere nach Unternehmen</button>
+        </br>
+        <button  onclick="sortBranche()" id="sortBranche">Sortiere nach Branche</button>
+        </br>
+        <button  onclick="sortLand()" id="sortLand">Sortiere nach Land</button>
+        </br>
+        <button  onclick="sortCO2()" id="sortCO2">Sortiere nach CO2-Ausstoß gesamt</button>
 
-    <!-- Buttons für Filter -->
-    <label for="filterLand">Filter nach Land:</label>
-    <select id="filterLand">
-        <option value="">Alle</option>
-        <option value="Deutschland">Deutschland</option>
-        <option value="USA">USA</option>
-        <option value="Kanada">Kanada</option>
-        <option value="Japan">Japan</option>
-        <option value="Saudi-Arabien">Saudi-Arabien</option>
-        <option value="Indien">Indien</option>
-        <option value="China">China</option>
-        <option value="Frankreich">Frankreich</option>
-        <option value="UK">UK</option>
-        <option value="Brasilien">Brasilien</option>
-        <option value="Südafrika">Südafrika</option>
-    </select>
 
-    <button id="sortUnternehmen">Sortiere nach Unternehmen</button>
+        <table id="companyTable">
+            <thead>
+                <tr>
+                    <th>Rang</th>
+                    <th>Unternehmen</th>
+                    <th>Branche</th>
+                    <th>Land</th>
+                    <th>Kontinent</th>
+                    <th>CO2-Ausstoß gesamt</th>
+                    <th>CO2-Ausstoß pro Mitarbeiter</th>
+                    <th>CO2-Ausstoß pro Umsatz</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Daten werden hier eingefügt -->
+            </tbody>
+        </table>
 
-
-    <table id="companyTable">
-        <thead>
-            <tr>
-                <th>Rang</th>
-                <th>Unternehmen</th>
-                <th>Branche</th>
-                <th>Land</th>
-                <th>Kontinent</th>
-                <th>CO2-Ausstoß gesamt</th>
-                <th>CO2-Ausstoß pro Mitarbeiter</th>
-                <th>CO2-Ausstoß pro Umsatz</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Daten werden hier eingefügt -->
-        </tbody>
-    </table>
-
-    <script>
-        // JSON-Datei laden und in die Tabelle einfügen
-        fetch('Unternehmen.json')
-            .then(response => response.json())
-            .then(data => {
-                const tableBody = document.querySelector("#companyTable tbody");
-                data.companies.forEach(company => {
-                    const row = document.createElement("tr");
-
-                    row.innerHTML = `
-                        <td>${company.Rang}</td>
-                        <td>${company.Unternehmen}</td>
-                        <td>${company.Branche}</td>
-                        <td>${company.Land}</td>
-                        <td>${company.Kontinent}</td>
-                        <td>${Number(company["CO2-Ausstoß gesamt"]).toLocaleString()}</td>
-                        <td>${company["CO2-Ausstoß pro Mitarbeiter"]}</td>
-                        <td>${company["CO2-Ausstoß pro Umsatz"]}</td>
-                    `;
-
-                    tableBody.appendChild(row);
-                });
-            })
-            .catch(error => console.error("Fehler beim Laden der Datei:", error));
-    </script>
-
-<footer>
-        <p><a href="impressum.html">Impressum</a></p>
-        <p><a href="datenschutzerklärung.html">Datenschutzerklärung</a></p>
-        <p><a href="rechtlichehinweise.html">Rechtliche Hinweise</a></p>
-    </footer>
+        <footer>
+            <nav>
+                <ul class="text-end">
+                    <li class="d-inline"><a href="impressum.html">Impressum</a></li>
+                    <li class="d-inline"><a href="datenschutzerklärung.html">Datenschutzerklärung</a></li>
+                    <li class="d-inline"><a href="rechtlichehinweise.html">Rechtliche Hinweise</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </main>
 </body>
 
 </html>
