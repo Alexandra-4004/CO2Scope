@@ -35,22 +35,31 @@ nav {
 }
 
 nav ul {
-    list-style: none;    /* Entfernt die Aufzählungszeichen */
-    padding: 0;    /* Entfernt Standard-Padding */
-    margin: 0;    /* Entfernt Standard-Margin */
-    display: flex;    /* Setzt die Links in eine Reihe */
-    gap: 15px;   /* Fügt Abstand zwischen den Links hinzu */
+    list-style: none;
+    /* Entfernt die Aufzählungszeichen */
+    padding: 0;
+    /* Entfernt Standard-Padding */
+    margin: 0;
+    /* Entfernt Standard-Margin */
+    display: flex;
+    /* Setzt die Links in eine Reihe */
+    gap: 15px;
+    /* Fügt Abstand zwischen den Links hinzu */
 }
 
 nav a {
-    text-decoration: none;    /* Entfernt die Unterstreichung */
-    font-weight: normal;    /* Entfernt Fettschrift */
-    color: black;    /* Setzt die Textfarbe*/
+    text-decoration: none;
+    /* Entfernt die Unterstreichung */
+    font-weight: normal;
+    /* Entfernt Fettschrift */
+    color: black;
+    /* Setzt die Textfarbe*/
     padding: 5px 10px;
 }
 
 nav a:hover {
-    color: rgb(14, 139, 0);    /* Farbe ändern, wenn die Maus drüberfährt */
+    color: rgb(14, 139, 0);
+    /* Farbe ändern, wenn die Maus drüberfährt */
 }
 
 
@@ -70,7 +79,6 @@ header {
     text-align: center;
     font-weight: bold;
     flex-basis: 100%;
-}
 
 main {
     background-color: lightyellow;
@@ -87,13 +95,6 @@ table {
     border-collapse: collapse;
     flex-basis: 80%;
 }
-tr.ungerade{
-    background-color: #EEE;
-}
-
-tr.gerade{
-    background-color: #FFF;
-}
 
 th,
 td {
@@ -105,26 +106,73 @@ td {
 th {
     background-color: #f2f2f2;
 }
-button {
-    background-color: #4CAF50; /* Grün */
-    border: none;
-    color: white;
-    padding: 1px 4px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 4px 2px;
-    cursor: pointer;
-    display: flex;
+
+#filterContainer, #buttonContainer {
+    display: flex; /* Setzt die Elemente nebeneinander */
+    gap: 10px; /* Abstand zwischen den Elementen */
+    align-items: center; /* Vertikale Ausrichtung */
+    margin-bottom: 20px; /* Abstand nach unten */
 }
+
+#filterContainer label,#buttonContainer button {
+    margin-right: 10px; /* Abstand zwischen den Labels und Buttons */
+}
+
 button:hover {
-    background-color: #45a049; /* Dunkleres Grün */
+    background-color: #45a049;
+    /* Dunkleres Grün */
+}
+
+/*Kontaktformular*/
+form {
+    width: 300px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 6px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 /*Footer*/
 footer {
-    background-color:  rgb(225, 191, 154);
+    background-color: rgb(225, 191, 154);
     padding: 1em;
     flex-basis: 100%;
 }
@@ -138,19 +186,28 @@ footer nav ul li {
 }
 
 footer a {
-    padding: 0;    /* Entfernt Standard-Padding */
-    margin: 0;    /* Entfernt Standard-Margin */
-    display: flex;    /* Setzt die Links in eine Reihe */
-    gap: 15px;   /* Fügt Abstand zwischen den Links hinzu */
+    padding: 0;
+    /* Entfernt Standard-Padding */
+    margin: 0;
+    /* Entfernt Standard-Margin */
+    display: flex;
+    /* Setzt die Links in eine Reihe */
+    gap: 15px;
+    /* Fügt Abstand zwischen den Links hinzu */
 }
 
 footer a {
-    text-decoration: none;    /* Entfernt die Unterstreichung */
-    font-weight: normal;    /* Entfernt Fettschrift */
-    color: black;    /* Setzt die Textfarbe */
-    padding: 5px 10px;    /* Fügt etwas Innenabstand hinzu */
+    text-decoration: none;
+    /* Entfernt die Unterstreichung */
+    font-weight: normal;
+    /* Entfernt Fettschrift */
+    color: black;
+    /* Setzt die Textfarbe */
+    padding: 5px 10px;
+    /* Fügt etwas Innenabstand hinzu */
 }
 
 footer a:hover {
-    color: rgb(14, 139, 0);    /* Farbe ändern, wenn die Maus drüberfährt */
+    color: rgb(14, 139, 0);
+    /* Farbe ändern, wenn die Maus drüberfährt */
 }

@@ -11,7 +11,7 @@
             <h1>CO2Scope: CO2-Ausstoß</h1>
         </div>
         <div id="heading-container">
-            <img src="Logo-Co2Scope.jpg" alt="CO2Scope" style="width:100%;height:auto;">
+            <img src="Logo-Co2Scope.png" alt="CO2Scope" style="width:20%;height:auto;">
             <h1>CO2Scope: CO2-Ausstoß</h1>
         </div>
         <nav>
@@ -53,12 +53,18 @@
         <h2> Kontaktformular</h2>
         <p>Hinterlasse uns eine Nachricht, wir melden uns so schnell wie möglich zurück! </p>
         <p>
-            Name: </br>
-            E-Mail: </br>
-            Betreff: </br>
-            Nachricht:</br>
-            ____________________________________________ </br>
-            Senden
+        <form action="" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" pattern="[a-zA-Z0-9äÄüÜöÖß ]+" required>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9äÄüÜöÖß@ ]+" required>
+
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" rows="5" pattern="[a-zA-Z0-9äÄüÜöÖß ]+" required></textarea>
+
+            <button type="submit">Senden</button>
+        </form>
         </p>
 
         <footer>

@@ -9,7 +9,8 @@
     <script defer src="scripts-solution.js"></script>
 </head>
 
-<body onload="loadData()">
+<body onload="loadInitialData()">
+    <!-- onload="loadData()" ruft direkt die Funktion loadData() auf, wenn die Seite geladen wird -->
     <header>
         <div id="heading-container" class="row">
             <div class="col-md-12 col-lg-4">
@@ -32,34 +33,51 @@
     <main>
         <h1>Unternehmen und CO2-Ausstoß</h1>
 
-        <!-- Buttons für Filter -->
-        <label for="filterLand">Filter nach Land:</label>
-        <select id="filterLand">
-            <option value="">Alle</option>
-            <option value="Deutschland">Deutschland</option>
-            <option value="USA">USA</option>
-            <option value="Kanada">Kanada</option>
-            <option value="Japan">Japan</option>
-            <option value="Saudi-Arabien">Saudi-Arabien</option>
-            <option value="Indien">Indien</option>
-            <option value="China">China</option>
-            <option value="Frankreich">Frankreich</option>
-            <option value="UK">UK</option>
-            <option value="Brasilien">Brasilien</option>
-            <option value="Südafrika">Südafrika</option>
-        </select>
-        </br> 
-    </br>
-    <button onclick="sortRang()" id="sortRang">Sortiere nach Rang</button>      
-         </br>
-         <button onclick="sortUnternehmen()" id="sortUnternehmen">Sortiere nach Unternehmen</button>
-        </br>
-        <button  onclick="sortBranche()" id="sortBranche">Sortiere nach Branche</button>
-        </br>
-        <button  onclick="sortLand()" id="sortLand">Sortiere nach Land</button>
-        </br>
-        <button  onclick="sortCO2()" id="sortCO2">Sortiere nach CO2-Ausstoß gesamt</button>
+        <!-- Button für Filter nach Land -->
+        <div id="filterContainer">
+            <label for="filterLand">Filter nach Land:</label>
+            <select id="filterByLand" onchange="filter()">
+                <option value="">Alle</option>
+                <option value="Deutschland">Deutschland</option>
+                <option value="USA">USA</option>
+                <option value="Kanada">Kanada</option>
+                <option value="Japan">Japan</option>
+                <option value="Saudi-Arabien">Saudi-Arabien</option>
+                <option value="Indien">Indien</option>
+                <option value="China">China</option>
+                <option value="Frankreich">Frankreich</option>
+                <option value="UK">UK</option>
+                <option value="Brasilien">Brasilien</option>
+                <option value="Südafrika">Südafrika</option>
+            </select>
 
+            <!-- Button für Filter nach Unternehmen -->
+            <label for="filterCompanies">Filter nach Unternehmen:</label>
+            <select id="filterByCompanies" onchange="filter()">
+                <option value="">Alle</option>
+                <option value="Energy AG">Energy AG</option>
+                <option value="NorthTec Corp">NorthTec Corp</option>
+                <option value="Eco Solutions Ltd">Eco Solutions Ltd</option>
+                <option value="Green Future GmbH">Green Future GmbH</option>
+                <option value="Tech Innovators Inc">Tech Innovators Inc</option>
+                <option value="Oil & Gas Global">Oil & Gas Global</option>
+                <option value="Automotive Leaders">Automotive Leaders</option>
+                <option value="Steel Makers Ltd">Steel Makers Ltd</option>
+                <option value="Chemical Corp">Chemical Corp</option>
+                <option value="Food Processing Inc">Food Processing Inc</option>
+                <option value="Smart Grid Solutions">Smart Grid Solutions</option>
+                <option value="Logistics World">Logistics World</option>
+                <option value="African Mining Co">African Mining Co</option>
+            </select>
+        </div>
+        </br>
+        <div id="buttonContainer">
+            <!-- Buttons für Sortierung -->
+            <button onclick="sortUnternehmen()" id="sortUnternehmen">Sortiere nach Unternehmen</button>
+            <button onclick="sortLand()" id="sortLand">Sortiere nach Land</button>
+            <button onclick="initializeData()" id="resetData">Zurücksetzen</button>
+        </div>
+        </br>
 
         <table id="companyTable">
             <thead>

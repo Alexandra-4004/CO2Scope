@@ -1,20 +1,30 @@
-var loadedCompanies = []; // Array für die Unternehmensdaten
+var currentEntries = []; // Array to hold the current entries on the table
+var allEntries = []; // Array to hold all entries from the JSON file
 
-//asynchrone Funktion in JS
-function loadData() {
+//load initial data, only read JSON file once
+function loadInitialData() {
     fetch('Unternehmen.json')
         .then((response) => response.json())
         .then((data) => {
-            loadedCompanies = data.companies; // JSON-Daten in das Array einfügen
-            renderTable(); // Tabelle rendern, nachdem die Daten geladen wurden
+            allEntries = data.companies; // JSON-Daten in das Array 
+            currentEntries = allEntries; // Set current entries to all entries initially
+            initializeData();
         })
 };
 
+function initializeData() {
+    document.getElementById("filterByLand").value = ""; // Reset the filter dropdown to its default value
+    document.getElementById("filterByCompanies").value = ""; // Reset the filter dropdown to its default value
+    currentEntries = allEntries; // Reset current entries to all entries
+    sortRang(); // Sort entries by rank & afterwards render table
+}
+
 //Tabelle rendern
-function renderTable() {
+function renderTable(companies) {
+    currentEntries = companies;
     const tableBody = document.querySelector("#companyTable tbody");
-    // tableBody.remove(); // Vorhandene Tabelle entfernen
-    loadedCompanies.forEach(company => {
+    deleteTable()
+    companies.forEach(company => {
         const row = document.createElement("tr");
 
         row.innerHTML = `
@@ -38,50 +48,56 @@ function deleteTable() {
 }
 
 function sortRang() {
-    deleteTable(); // Tabelle leeren, bevor die neuen Daten hinzugefügt werden
-    loadedCompanies.sort((a, b) => {
-        return a.Rang - b.Rang; // Rang sortieren
+    currentEntries.sort((a, b) => {
+        return a.Rang - b.Rang; // sort by rank in ascending order
     });
-    renderTable(); // Tabelle neu rendern nach dem Sortieren
+    renderTable(currentEntries); // render table after sorting
 }
 
 function sortUnternehmen() {
-    deleteTable(); // Tabelle leeren, bevor die neuen Daten hinzugefügt werden
-    loadedCompanies.sort((a, b) => {
+    currentEntries.sort((a, b) => {
         if (a.Unternehmen < b.Unternehmen) return -1;
         if (a.Unternehmen > b.Unternehmen) return 1;
         return 0;
     });
-    renderTable(); // Tabelle neu rendern nach dem Sortieren
-}
-
-function sortBranche() {
-    deleteTable(); // Tabelle leeren, bevor die neuen Daten hinzugefügt werden
-    loadedCompanies.sort((a, b) => {
-        if (a.Branche < b.Branche) return -1;
-        if (a.Branche > b.Branche) return 1;
-        return 0;
-    });
-    renderTable(); // Tabelle neu rendern nach dem Sortieren
+    renderTable(currentEntries); // render table after sorting
 }
 
 function sortLand() {
-    deleteTable(); // Tabelle leeren, bevor die neuen Daten hinzugefügt werden
-    loadedCompanies.sort((a, b) => {
+    currentEntries.sort((a, b) => {
         if (a.Land < b.Land) return -1;
         if (a.Land > b.Land) return 1;
         return 0;
     });
-    renderTable(); // Tabelle neu rendern nach dem Sortieren
+    renderTable(currentEntries); // render table after sorting
 }
 
-function sortCO2() {
-    deleteTable(); // Tabelle leeren, bevor die neuen Daten hinzugefügt werden
-    loadedCompanies.sort((a, b) => {
-        return a["CO2-Ausstoß gesamt"] - b["CO2-Ausstoß gesamt"];
-    });
-    renderTable(); // Tabelle neu rendern nach dem Sortieren
+function filter() {
+    currentEntries = allEntries; // get all companies to filter correclty
+    let filterCompany = document.getElementById("filterByCompanies").value;
+    let filterLand = document.getElementById("filterByLand").value;
+
+    if (filterCompany === "" && filterLand === "") {
+        initializeData(); // Load all data if no filter is applied
+        return;
+    } else if (filterCompany !== "" && filterLand === "") {
+        filteredCompanies = currentEntries.filter(company => company.Unternehmen === filterCompany);
+        renderTable(filteredCompanies);
+        return;
+    } else if (filterCompany === "" && filterLand !== "") {
+        filteredCompanies = currentEntries.filter(company => company.Land === filterLand);
+        renderTable(filteredCompanies);
+        return;
+    } else if (filterCompany !== "" && filterLand !== "") {
+        filteredCompanies = currentEntries.filter(company => company.Unternehmen === filterCompany && company.Land === filterLand);
+        renderTable(filteredCompanies);
+        return;
+    }
+}
+
+function submit() {
+    alert("Ihre Nachricht wurde erfolgreich gesendet!");
 }
 
 // Set the direction of the page based on the user's language
-document.documentElement.dir = navigator.language.startsWith('ar') || navigator.language.startsWith('he') ? 'rtl' : 'ltr'; 
+//document.documentElement.dir = navigator.language.startsWith('ar') || navigator.language.startsWith('he') ? 'rtl' : 'ltr';

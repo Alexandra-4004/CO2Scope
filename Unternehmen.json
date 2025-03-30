@@ -34,8 +34,8 @@
       "Rang": 4,
       "Unternehmen": "Green Future GmbH",
       "Branche": "Erneuerbare Energien",
-      "Land": "Deutschland",
-      "Kontinent": "Europa",
+      "Land": "Kanada",
+      "Kontinent": "Nordamerika",
       "CO2-Ausstoß gesamt": 1200000,
       "CO2-Ausstoß pro Mitarbeiter": 15,
       "CO2-Ausstoß pro Umsatz": 0.08
@@ -129,6 +129,36 @@
       "CO2-Ausstoß gesamt": 7500000,
       "CO2-Ausstoß pro Mitarbeiter": 85,
       "CO2-Ausstoß pro Umsatz": 0.35
+    },
+    {
+      "Rang": 14,
+      "Unternehmen": "Green Future GmbH",
+      "Branche": "Erneuerbare Energien",
+      "Land": "Deutschland",
+      "Kontinent": "Europa",
+      "CO2-Ausstoß gesamt": 1300000,
+      "CO2-Ausstoß pro Mitarbeiter": 17,
+      "CO2-Ausstoß pro Umsatz": 0.09
+    },
+    {
+      "Rang": 15,
+      "Unternehmen": "Green Future GmbH",
+      "Branche": "Stahlindustrie",
+      "Land": "Indien",
+      "Kontinent": "Asien",
+      "CO2-Ausstoß gesamt": 8700000,
+      "CO2-Ausstoß pro Mitarbeiter": 95,
+      "CO2-Ausstoß pro Umsatz": 0.42
+    },
+    {
+      "Rang": 16,
+      "Unternehmen": "Logistics World",
+      "Branche": "Transport",
+      "Land": "Deutschland",
+      "Kontinent": "Europa",
+      "CO2-Ausstoß gesamt": 5000000,
+      "CO2-Ausstoß pro Mitarbeiter": 55,
+      "CO2-Ausstoß pro Umsatz": 0.22
     }
   ]
 }
