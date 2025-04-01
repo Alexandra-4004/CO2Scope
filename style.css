@@ -6,12 +6,12 @@ Tablet: @media screen and (min-width: 768px) and (max-width: 1023px) {…}
 Smartphone: @media screen and (max-width: 767px) {...}
 */
 
-/*Links für LTR*/
+/*Left for LTR*/
 [dir="rtl"] .menu {
     left: 0;
 }
 
-/*Rechts für LTR*/
+/*Right for LTR*/
 [dir="ltr"] .menu {
     right: 0;
 }
@@ -19,10 +19,12 @@ Smartphone: @media screen and (max-width: 767px) {...}
 /*Navigation*/
 .nav {
     position: fixed;
+    /* fixed position */
     top: 0;
     width: 200px;
     height: 100vh;
     background-color: #333;
+    /* set background color */
     padding-top: 20px;
 }
 
@@ -36,32 +38,31 @@ nav {
 
 nav ul {
     list-style: none;
-    /* Entfernt die Aufzählungszeichen */
+    /*removes the default bullets */
     padding: 0;
-    /* Entfernt Standard-Padding */
+    /*removes Standard-Padding */
     margin: 0;
-    /* Entfernt Standard-Margin */
+    /*removes Standard-Margin */
     display: flex;
-    /* Setzt die Links in eine Reihe */
+    /* set links in a row */
     gap: 15px;
-    /* Fügt Abstand zwischen den Links hinzu */
+    /* adds space between the links*/
 }
 
 nav a {
     text-decoration: none;
-    /* Entfernt die Unterstreichung */
+    /* removes the default underline*/
     font-weight: normal;
-    /* Entfernt Fettschrift */
+    /* removes bold in the text */
     color: black;
-    /* Setzt die Textfarbe*/
+    /*set text color of the links*/
     padding: 5px 10px;
 }
 
 nav a:hover {
     color: rgb(14, 139, 0);
-    /* Farbe ändern, wenn die Maus drüberfährt */
+    /* changes color when hovered */
 }
-
 
 body {
     background-color: rgb(225, 191, 154);
@@ -70,7 +71,7 @@ body {
     /*flex*/
     display: flex;
     flex-wrap: wrap;
-    /*Elemente können nebeneinander gewrappt werden, wenn Platz verfügbar*/
+    /* elements can wrap to the next line if there is not enough space */
 }
 
 header {
@@ -80,134 +81,153 @@ header {
     font-weight: bold;
     flex-basis: 100%;
 
-main {
-    background-color: lightyellow;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    flex-basis: 80%;
-}
+    main {
+        background-color: lightyellow;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        flex-basis: 80%;
+    }
 
-/*Tabelle*/
-table {
-    background-color: rgba(0, 128, 0, 0.509);
-    width: 100%;
-    border-collapse: collapse;
-    flex-basis: 80%;
-}
+    /*Table*/
+    table {
+        background-color: rgba(0, 128, 0, 0.509);
+        width: 100%;
+        border-collapse: collapse;
+        flex-basis: 80%;
+    }
 
-th,
-td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-}
+    th,
+    td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
 
-th {
-    background-color: #f2f2f2;
-}
+    th {
+        background-color: #f2f2f2;
+    }
 
-#filterContainer, #buttonContainer {
-    display: flex; /* Setzt die Elemente nebeneinander */
-    gap: 10px; /* Abstand zwischen den Elementen */
-    align-items: center; /* Vertikale Ausrichtung */
-    margin-bottom: 20px; /* Abstand nach unten */
-}
+    #filterContainer,
+    #buttonContainer {
+        display: flex;
+        /*set elements in a row*/
+        gap: 10px;
+        /* Add space between elements */
+        align-items: center;
+        /* Align items vertically */
+        margin-bottom: 20px;
+        /* Add space below the filter container */
+    }
 
-#filterContainer label,#buttonContainer button {
-    margin-right: 10px; /* Abstand zwischen den Labels und Buttons */
-}
+    #filterContainer label,
+    #buttonContainer button {
+        margin-right: 10px;
+        /* Add space between labels and buttons */
+    }
 
-button:hover {
-    background-color: #45a049;
-    /* Dunkleres Grün */
-}
+    button:hover {
+        background-color: #45a049;
+    }
 
-/*Kontaktformular*/
-form {
-    width: 300px;
-    margin: 50px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    /*Contact form*/
+    form {
+        width: 300px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* shadow effect */
+    }
 
-label {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 6px;
-    display: block;
-}
+    label {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 6px;
+        display: block;
+    }
 
-input[type="text"],
-input[type="email"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 14px;
-}
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
 
-textarea {
-    resize: vertical;
-}
+    textarea {
+        resize: vertical;
+    }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-}
+    button {
+        background-color: #4CAF50;
+        /* Set background color */
+        color: white;
+        /* Set text color */
+        border: none;
+        /* Remove border */
+        padding: 10px 15px;
+        /* Add padding */
+        font-size: 16px;
+        /* Set font size */
+        border-radius: 4px;
+        /* Rounded corners */
+        cursor: pointer;
+        /* Pointer cursor on hover */
+        width: 100%;
+        /* Full width */
+    }
 
-button:hover {
-    background-color: #45a049;
-}
+    button:hover {
+        background-color: #45a049;
+    }
 
-/*Footer*/
-footer {
-    background-color: rgb(225, 191, 154);
-    padding: 1em;
-    flex-basis: 100%;
-}
+    /*Footer*/
+    footer {
+        background-color: rgb(225, 191, 154);
+        /* set background color */
+        padding: 1em;
+        flex-basis: 100%;
+        /* Footer takes full width */
+    }
 
-footer nav ul {
-    text-align: center;
-}
+    footer nav ul {
+        text-align: center;
+    }
 
-footer nav ul li {
-    display: inline;
-}
+    footer nav ul li {
+        display: inline;
+    }
 
-footer a {
-    padding: 0;
-    /* Entfernt Standard-Padding */
-    margin: 0;
-    /* Entfernt Standard-Margin */
-    display: flex;
-    /* Setzt die Links in eine Reihe */
-    gap: 15px;
-    /* Fügt Abstand zwischen den Links hinzu */
-}
+    footer a {
+        padding: 0;
+        /* Removes Standard-Padding */
+        margin: 0;
+        /* Removes Standard-Margin */
+        display: flex;
+        /* Set link into a row */
+        justify-content: center;
+        /* Center the links horizontally */
+        gap: 15px;
+        /* Adds space between the links */
+    }
 
-footer a {
-    text-decoration: none;
-    /* Entfernt die Unterstreichung */
-    font-weight: normal;
-    /* Entfernt Fettschrift */
-    color: black;
-    /* Setzt die Textfarbe */
-    padding: 5px 10px;
-    /* Fügt etwas Innenabstand hinzu */
-}
+    footer a {
+        text-decoration: none;
+        /* Removes the default underline */
+        font-weight: normal;
+        /* Removes bold in the text */
+        color: black;
+        /* set text color of the links */
+        padding: 5px 10px;
+        /* Add padding to the links */
+    }
 
-footer a:hover {
-    color: rgb(14, 139, 0);
-    /* Farbe ändern, wenn die Maus drüberfährt */
-}
+    footer a:hover {
+        color: rgb(14, 139, 0);
+        /* Changes color when hovered */
+    }
