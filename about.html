@@ -5,26 +5,39 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" /> <!--Verweis auf Stylesheet-Datei-->
     <title>Über CO₂Scope</title>
+    <script defer src="scripts-solution.js"></script>
+
 </head>
 <header>
     <div id="heading-container">
         <img src="Logo-Co2Scope.png" alt="CO2Scope" style="width:20%;height:auto;">
-        <h1>CO2Scope: CO2-Ausstoß</h1>
+        <h1>CO2-Ausstoß</h1>
     </div>
-    <nav>
-        <ul class="text-end">
-            <li class="d-inline"><a href="index.html">Home</a></li>
-            <li class="d-inline"><a href="co2-tabelle.html">CO2-Tabelle</a></li>
-            <li class="d-inline"><a href="about.html">Über uns</a></li>
-            <li class="d-inline"><a href="contact.html">Kontakt</a></li>
-        </ul>
-    </nav>
+    <div class="menu" id="navbar" class="row">
+        <div>
+            <nav>
+                <ul class="text-end">
+                    <li class="d-inline"><a href="index.html">Home</a></li>
+                    <li class="d-inline"><a href="co2-tabelle.html">CO2-Tabelle</a></li>
+                    <li class="d-inline"><a href="about.html">Über uns</a></li>
+                    <li class="d-inline"><a href="contact.html">Kontakt</a></li>
+                    <div class="language-switcher">
+                        <label for="language-select">Sprache</label>
+                        <select id="language-select" onchange="switchLanguage()">
+                            <option value="de" selected>Deutsch</option>
+                            <option value="ar">العربية</option>
+                        </select>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </header>
 <main>
-    <h1>Über CO₂Scope - Transparenz für eine klimafreundliche Zukunft</h1>
+    <h2>Über CO₂Scope - Transparenz für eine klimafreundliche Zukunft</h2>
     <img src="Logo-Co2Scope.jpg" alt="Über uns" style="width:100%;height:auto;">
 
-    <h2>Wer wir sind</h2>
+    <h3>Wer wir sind</h3>
 
     <p>CO₂Scope ist eine unabhängige Non-Profit-Organisation, die sich für mehr Transparenz im Kampf gegen den
         Klimawandel einsetzt. Unser Ziel ist es, öffentlich zugängliche und verlässliche Daten über die globalen
@@ -37,7 +50,7 @@
         ist.
     </p>
     </br>
-    <h2>Was wir tun</h2>
+    <h3>Was wir tun</h3>
     <p>Unsere Kernaufgabe ist die Entwicklung und Pflege einer interaktiven Online-Plattform, die umfassende
         CO₂-Emissionsdaten von Ländern, Unternehmen und Industrien offenlegt. Mit unserer Plattform ermöglichen wir:
     </p>
@@ -53,34 +66,34 @@
         zusammen, um kontinuierlich neue Erkenntnisse und aktuelle Emissionsdaten bereitzustellen.</p>
     </br>
 
-    <h2>Unsere Vision</h2>
+    <h3>Unsere Vision</h3>
     <p>Wir glauben an eine Welt, in der transparente Informationen über CO₂-Emissionen zu besseren Entscheidungen und
         wirksameren Klimaschutzmaßnahmen führen. Unsere Vision ist eine klimaneutrale Zukunft, in der Regierungen,
         Unternehmen und die Zivilgesellschaft Verantwortung übernehmen und nachhaltige Lösungen aktiv vorantreiben.</p>
     </br>
-    <h2>Unsere Mission</h2>
+    <h3>Unsere Mission</h3>
     <ul>
         <li>Emissionsdaten offen und verständlich zugänglich machen.</li>
         <li>Menschen befähigen, fundierte Entscheidungen für den Klimaschutz zu treffen.</li>
         <li>Unternehmen und Regierungen zur Rechenschaft ziehen, um nachhaltige Veränderungen zu bewirken.</li>
     </ul>
     </br>
-    <h2>CO₂Scope – Wissen schafft Wandel.</h2>
+    <h3>CO₂Scope – Wissen schafft Wandel.</h3>
     </br>
-    <h2>Möchtest Du uns unterstützen?</h2>
+    <h3>Möchtest Du uns unterstützen?</h3>
     </br>
     <p>Ob durch eine Spende, Forschung, Partnerschaften oder ehrenamtliches Engagement – jede Hilfe zählt! <a
             href="contact.html">Kontaktiere uns jetzt</a></p>
-
-    <footer>
-        <nav>
-            <ul class="text-end">
-                <li class="d-inline"><a href="impressum.html">Impressum</a></li>
-                <li class="d-inline"><a href="datenschutzerklärung.html">Datenschutzerklärung</a></li>
-                <li class="d-inline"><a href="rechtlichehinweise.html">Rechtliche Hinweise</a></li>
-            </ul>
-        </nav>
-    </footer>
 </main>
+</body>
+<footer>
+    <nav>
+        <ul class="text-end">
+            <li class="d-inline"><a href="impressum.html">Impressum</a></li>
+            <li class="d-inline"><a href="datenschutzerklärung.html">Datenschutzerklärung</a></li>
+            <li class="d-inline"><a href="rechtlichehinweise.html">Rechtliche Hinweise</a></li>
+        </ul>
+    </nav>
+</footer>
 
 </html>

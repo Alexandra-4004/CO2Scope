@@ -100,4 +100,17 @@ function submit() {
 }
 
 // Set the direction of the page based on the user's language
-//document.documentElement.dir = navigator.language.startsWith('ar') || navigator.language.startsWith('he') ? 'rtl' : 'ltr';
+function switchLanguage() {
+    let languageSelect = document.getElementById("language-select");
+    let selectedLang = languageSelect.value;
+
+    let navElement = document.querySelector("nav");
+
+    if (selectedLang === "ar") {
+        navElement.classList.add("rtl-nav");
+        navElement.classList.remove("ltr-nav");
+    } else {
+        navElement.classList.add("ltr-nav");
+        navElement.classList.remove("rtl-nav");
+    }
+}

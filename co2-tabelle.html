@@ -17,17 +17,28 @@
                 <img src="Logo-Co2Scope.png" alt="CO2Scope" style="width:20%;height:auto;">
             </div>
             <div class="col-md-12 col-lg-8">
-                <h1>CO2-Ausstoß von Unternehmen: CO2-Tabelle</h1>
+                <h1>CO2-Tabelle</h1>
             </div>
         </div>
-        <nav>
-            <ul class="text-end">
-                <li class="d-inline"><a href="index.html">Home</a></li>
-                <li class="d-inline"><a href="co2-tabelle.html">CO2-Tabelle</a></li>
-                <li class="d-inline"><a href="about.html">Über uns</a></li>
-                <li class="d-inline"><a href="contact.html">Kontakt</a></li>
-            </ul>
-        </nav>
+        <div class="menu" id="navbar" class="row">
+            <div>
+                <nav>
+                    <ul class="text-end">
+                        <li class="d-inline"><a href="index.html">Home</a></li>
+                        <li class="d-inline"><a href="co2-tabelle.html">CO2-Tabelle</a></li>
+                        <li class="d-inline"><a href="about.html">Über uns</a></li>
+                        <li class="d-inline"><a href="contact.html">Kontakt</a></li>
+                        <div class="language-switcher">
+                            <label for="language-select">Sprache</label>
+                            <select id="language-select" onchange="switchLanguage()">
+                                <option value="de" selected>Deutsch</option>
+                                <option value="ar">العربية</option>
+                            </select>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -96,17 +107,16 @@
                 <!-- Daten werden hier eingefügt -->
             </tbody>
         </table>
-
-        <footer>
-            <nav>
-                <ul class="text-end">
-                    <li class="d-inline"><a href="impressum.html">Impressum</a></li>
-                    <li class="d-inline"><a href="datenschutzerklärung.html">Datenschutzerklärung</a></li>
-                    <li class="d-inline"><a href="rechtlichehinweise.html">Rechtliche Hinweise</a></li>
-                </ul>
-            </nav>
-        </footer>
     </main>
 </body>
+<footer>
+    <nav>
+        <ul class="text-end">
+            <li class="d-inline"><a href="impressum.html">Impressum</a></li>
+            <li class="d-inline"><a href="datenschutzerklärung.html">Datenschutzerklärung</a></li>
+            <li class="d-inline"><a href="rechtlichehinweise.html">Rechtliche Hinweise</a></li>
+        </ul>
+    </nav>
+</footer>
 
 </html>
