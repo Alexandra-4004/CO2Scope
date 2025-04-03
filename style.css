@@ -39,7 +39,6 @@ nav ul {
     text-align: right;
     display: flex;
     flex-direction: row-reverse;
-    /* Reihenfolge der Navigationselemente umkehren */
 }
 
 .ltr-nav {
@@ -47,13 +46,7 @@ nav ul {
     text-align: left;
     display: flex;
     flex-direction: row;
-    /* Standard links nach rechts */
 }
-
-
-
-
-
 
 nav a,
 footer a {

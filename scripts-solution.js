@@ -114,3 +114,10 @@ function switchLanguage() {
         navElement.classList.remove("rtl-nav");
     }
 }
+
+function showAlert() {
+    document.getElementById("alertBox").style.display = "Ihre Nachricht wurde erfolgreich gesendet!";
+    setTimeout(function () {
+        document.getElementById("alertBox").style.display = "none";
+    }, 3000); // Hide the alert after 3 seconds
+}
