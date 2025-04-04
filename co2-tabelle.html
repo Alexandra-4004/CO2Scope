@@ -49,7 +49,7 @@
     <main>
         <h1>Unternehmen und CO2-Ausstoß</h1>
 
-        <!-- Button für Filter nach Land -->
+        <!-- Button for filter land -->
         <div id="filterContainer">
             <label for="filterLand">Filter nach Land:</label>
             <select id="filterByLand" onchange="filter()">
@@ -67,7 +67,7 @@
                 <option value="Südafrika">Südafrika</option>
             </select>
 
-            <!-- Button für Filter nach Unternehmen -->
+            <!-- Button for filter company -->
             <label for="filterCompanies">Filter nach Unternehmen:</label>
             <select id="filterByCompanies" onchange="filter()">
                 <option value="">Alle</option>
@@ -88,14 +88,15 @@
         </div>
         </br>
         <div id="buttonContainer">
-            <!-- Buttons für Sortierung -->
+            <!-- Buttons for sorting -->
             <button onclick="sortUnternehmen()" id="sortUnternehmen">Sortiere nach Unternehmen</button>
             <button onclick="sortLand()" id="sortLand">Sortiere nach Land</button>
             <button onclick="initializeData()" id="resetData">Zurücksetzen</button>
         </div>
         </br>
+        <div class="table-responsive">
 
-        <table id="companyTable">
+        <table id="companyTable" >
             <thead>
                 <tr>
                     <th>Rang</th>
@@ -109,9 +110,10 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Daten werden hier eingefügt -->
+                <!-- Data werde added here -->
             </tbody>
         </table>
+        </div>
     </main>
 </body>
 <footer>
