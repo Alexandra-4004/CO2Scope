@@ -115,9 +115,23 @@ function switchLanguage() {
     }
 }
 
-function showAlert() {
-    document.getElementById("alertBox").style.display = "Ihre Nachricht wurde erfolgreich gesendet!";
-    setTimeout(function () {
-        document.getElementById("alertBox").style.display = "none";
-    }, 3000); // Hide the alert after 3 seconds
+//Alert functionality
+const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    appendAlert('Vielen Dank für Ihre Nachricht. Leider konnte sie nicht versendet werden.', 'success')
+  })
 }

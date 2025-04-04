@@ -77,7 +77,8 @@
             <label for="message">Nachricht:</label>
             <textarea id="message" name="message" rows="5" pattern="[a-zA-Z0-9äÄüÜöÖß ]+" required></textarea>
 
-            <button type="submit" id="alertBox" class="btn btn-primary" onclick="showAlert()">Senden</button>
+            <div id="liveAlertPlaceholder"></div>
+            <button type="button" class="btn btn-primary" id="liveAlertBtn">Senden</button>
         </form>
         </p>
     </main>
