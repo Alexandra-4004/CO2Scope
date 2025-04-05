@@ -6,7 +6,7 @@
       "Branche": "Energie",
       "Land": "Deutschland",
       "Kontinent": "Europa",
-      "CO2-Ausstoß gesamt": 5000000,
+      "CO2-Ausstoß gesamt": 50000000,
       "CO2-Ausstoß pro Mitarbeiter": 50,
       "CO2-Ausstoß pro Umsatz": 0.2
     },
@@ -16,7 +16,7 @@
       "Branche": "Technologie",
       "Land": "USA",
       "Kontinent": "Nordamerika",
-      "CO2-Ausstoß gesamt": 3000000,
+      "CO2-Ausstoß gesamt": 40000000,
       "CO2-Ausstoß pro Mitarbeiter": 30,
       "CO2-Ausstoß pro Umsatz": 0.15
     },
@@ -26,7 +26,7 @@
       "Branche": "Umwelttechnik",
       "Land": "Kanada",
       "Kontinent": "Nordamerika",
-      "CO2-Ausstoß gesamt": 1500000,
+      "CO2-Ausstoß gesamt": 350000000,
       "CO2-Ausstoß pro Mitarbeiter": 20,
       "CO2-Ausstoß pro Umsatz": 0.1
     },
@@ -36,7 +36,7 @@
       "Branche": "Erneuerbare Energien",
       "Land": "Kanada",
       "Kontinent": "Nordamerika",
-      "CO2-Ausstoß gesamt": 1200000,
+      "CO2-Ausstoß gesamt": 330000000,
       "CO2-Ausstoß pro Mitarbeiter": 15,
       "CO2-Ausstoß pro Umsatz": 0.08
     },
@@ -46,7 +46,7 @@
       "Branche": "Technologie",
       "Land": "Japan",
       "Kontinent": "Asien",
-      "CO2-Ausstoß gesamt": 2800000,
+      "CO2-Ausstoß gesamt": 30000000,
       "CO2-Ausstoß pro Mitarbeiter": 25,
       "CO2-Ausstoß pro Umsatz": 0.12
     },
@@ -56,7 +56,7 @@
       "Branche": "Energie",
       "Land": "Saudi-Arabien",
       "Kontinent": "Asien",
-      "CO2-Ausstoß gesamt": 9000000,
+      "CO2-Ausstoß gesamt": 280000000,
       "CO2-Ausstoß pro Mitarbeiter": 80,
       "CO2-Ausstoß pro Umsatz": 0.5
     },
@@ -66,7 +66,7 @@
       "Branche": "Automobilindustrie",
       "Land": "USA",
       "Kontinent": "Nordamerika",
-      "CO2-Ausstoß gesamt": 7000000,
+      "CO2-Ausstoß gesamt": 250000000,
       "CO2-Ausstoß pro Mitarbeiter": 70,
       "CO2-Ausstoß pro Umsatz": 0.3
     },
@@ -76,7 +76,7 @@
       "Branche": "Stahlindustrie",
       "Land": "Indien",
       "Kontinent": "Asien",
-      "CO2-Ausstoß gesamt": 8500000,
+      "CO2-Ausstoß gesamt": 220000000,
       "CO2-Ausstoß pro Mitarbeiter": 90,
       "CO2-Ausstoß pro Umsatz": 0.4
     },
@@ -86,7 +86,7 @@
       "Branche": "Chemie",
       "Land": "China",
       "Kontinent": "Asien",
-      "CO2-Ausstoß gesamt": 6000000,
+      "CO2-Ausstoß gesamt": 200000000,
       "CO2-Ausstoß pro Mitarbeiter": 60,
       "CO2-Ausstoß pro Umsatz": 0.25
     },
@@ -96,7 +96,7 @@
       "Branche": "Lebensmittelindustrie",
       "Land": "Frankreich",
       "Kontinent": "Europa",
-      "CO2-Ausstoß gesamt": 2000000,
+      "CO2-Ausstoß gesamt": 180000000,
       "CO2-Ausstoß pro Mitarbeiter": 22,
       "CO2-Ausstoß pro Umsatz": 0.1
     },
@@ -106,7 +106,7 @@
       "Branche": "Energie",
       "Land": "UK",
       "Kontinent": "Europa",
-      "CO2-Ausstoß gesamt": 1800000,
+      "CO2-Ausstoß gesamt": 150000000,
       "CO2-Ausstoß pro Mitarbeiter": 19,
       "CO2-Ausstoß pro Umsatz": 0.09
     },
@@ -116,7 +116,7 @@
       "Branche": "Transport",
       "Land": "Brasilien",
       "Kontinent": "Südamerika",
-      "CO2-Ausstoß gesamt": 5000000,
+      "CO2-Ausstoß gesamt": 130000000,
       "CO2-Ausstoß pro Mitarbeiter": 55,
       "CO2-Ausstoß pro Umsatz": 0.22
     },
@@ -126,7 +126,7 @@
       "Branche": "Bergbau",
       "Land": "Südafrika",
       "Kontinent": "Afrika",
-      "CO2-Ausstoß gesamt": 7500000,
+      "CO2-Ausstoß gesamt": 100000000,
       "CO2-Ausstoß pro Mitarbeiter": 85,
       "CO2-Ausstoß pro Umsatz": 0.35
     },
@@ -136,7 +136,7 @@
       "Branche": "Erneuerbare Energien",
       "Land": "Deutschland",
       "Kontinent": "Europa",
-      "CO2-Ausstoß gesamt": 1300000,
+      "CO2-Ausstoß gesamt": 80000000,
       "CO2-Ausstoß pro Mitarbeiter": 17,
       "CO2-Ausstoß pro Umsatz": 0.09
     },
@@ -146,7 +146,7 @@
       "Branche": "Stahlindustrie",
       "Land": "Indien",
       "Kontinent": "Asien",
-      "CO2-Ausstoß gesamt": 8700000,
+      "CO2-Ausstoß gesamt": 60000000,
       "CO2-Ausstoß pro Mitarbeiter": 95,
       "CO2-Ausstoß pro Umsatz": 0.42
     },
@@ -156,7 +156,7 @@
       "Branche": "Transport",
       "Land": "Deutschland",
       "Kontinent": "Europa",
-      "CO2-Ausstoß gesamt": 5000000,
+      "CO2-Ausstoß gesamt": 8000000,
       "CO2-Ausstoß pro Mitarbeiter": 55,
       "CO2-Ausstoß pro Umsatz": 0.22
     }
